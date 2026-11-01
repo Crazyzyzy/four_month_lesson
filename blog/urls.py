@@ -16,11 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from articles.views import hello_world, hello_name, your_age
+from articles.views import catalog_list
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", hello_world),
-    path("hello/<str:name>", hello_name),
-    path("your_age/<str:age>", your_age)
+#    path("", hello_world),
+#    path("hello/<str:name>", hello_name),
+#    path("your_age/<str:age>", your_age),
+#    path("", article_list),
+    path("", catalog_list)
 ]
